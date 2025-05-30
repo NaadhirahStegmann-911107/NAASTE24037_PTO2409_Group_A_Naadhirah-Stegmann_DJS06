@@ -66,3 +66,13 @@ console.log(products.map(item => item.product));
 // 9. Filter by Name Length
 // Filter products ith names <= 5 characters
 console.log(products.filter(item => item.product.length <= 5).map(item => item.product));
+
+// 10. Price Manipulation
+// Filter valid prices, convert to numbers, and sum
+console.log(
+  products
+    .filter(item => item.price !== '' && item.price !== ' ')
+    .map(item => Number(item.price))
+    .reduce((sum, price) => sum + price, 0)
+);
+
