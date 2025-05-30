@@ -76,3 +76,6 @@ console.log(
     .reduce((sum, price) => sum + price, 0)
 );
 
+// 11. Cocateenate Product Names
+// Concatenate product names into s a single string
+console.log(products.reduce((str, item, index) => str + (index ? ', ' : '')+ item.product, ''));
