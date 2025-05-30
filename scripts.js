@@ -38,3 +38,8 @@ console.log(nameLengths);
 // Sort provinces alphabetically without mutuating original array
 const sortedProvinces = [...provinces].sort();
 console.log(sortedProvinces);
+
+// 5. Filtering Cape
+//Filter out provinces with "Cape" and log count
+const nonCapeProvinces = provinces.filter(province => !province.includes('Cape'));
+console.log(nonCapeProvinces.length);
