@@ -48,3 +48,11 @@ console.log(nonCapeProvinces.length);
 //Create boolean array for names containing 'S'
 const hasS = names.map(name => name.toLowerCase().split('').some(char => char ==='s'));
 console.log(hasS);
+
+// 7. Creating Object Mapping
+// Map names to provinces using reduce
+const nameProvinceMap = names.reduce((obj, name, index) => {
+  obj[name] = provinces[index];
+  return obj;
+}, {});
+console.log(nameProvinceMap);
