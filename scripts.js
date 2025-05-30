@@ -43,3 +43,8 @@ console.log(sortedProvinces);
 //Filter out provinces with "Cape" and log count
 const nonCapeProvinces = provinces.filter(province => !province.includes('Cape'));
 console.log(nonCapeProvinces.length);
+
+// 6 Finding 'S'
+//Create boolean array for names containing 'S'
+const hasS = names.map(name => name.toLowerCase().split('').some(char => char ==='s'));
+console.log(hasS);
