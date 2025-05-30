@@ -33,3 +33,8 @@ console.log(uppercaseProvinces);
 //Create an array of name lengths
 const nameLengths = names.map(name => name.length);
 console.log(nameLengths);
+
+// 4. Sorting
+// Sort provinces alphabetically without mutuating original array
+const sortedProvinces = [...provinces].sort();
+console.log(sortedProvinces);
