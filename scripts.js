@@ -56,3 +56,9 @@ const nameProvinceMap = names.reduce((obj, name, index) => {
   return obj;
 }, {});
 console.log(nameProvinceMap);
+
+//Advanced Exercises (Single console.log)
+
+//8. Log Products
+// Log all product names
+console.log(products.map(item => item.product));
