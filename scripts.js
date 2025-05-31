@@ -79,3 +79,23 @@ console.log(
 // 11. Cocateenate Product Names
 // Concatenate product names into s a single string
 console.log(products.reduce((str, item, index) => str + (index ? ', ' : '')+ item.product, ''));
+
+// 12. Find Extremes in Prices
+// find the highest and lowest prices
+console.log(
+  (() => {
+    const validPrices = products
+      .filter(item => item.price !== '' && item.price !== ' ')
+      .map(item => ({ ...item, price: Number(item.price) }));
+    const { min, max } = validPrices.reduce((acc, item) => ({
+      min: Math.min(acc.min, item.price),
+      max: Math.max(acc.max, item.price)
+    }),
+    { min: Infinity, max: -Infinity}
+  );
+  const highest = validPrices.find(item =>item.price === max).product;
+  const lowest = validPrices.find(item => item.price === min).product;
+  return `Highest: ${highest}. Lowest: ${lowest}.`;
+})()
+);
+
