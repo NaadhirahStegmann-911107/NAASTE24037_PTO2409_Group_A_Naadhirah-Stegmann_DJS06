@@ -99,3 +99,12 @@ console.log(
 })()
 );
 
+// 13. Object Transformation
+// Transform product to objects with name and cost
+console.log(
+  products.reduce((acc, item) => {
+    acc.push({ name: item.product, cost: item.price });
+    return acc;
+  }, [])
+);
+
